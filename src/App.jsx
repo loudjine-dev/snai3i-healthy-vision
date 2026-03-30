@@ -12,6 +12,14 @@ import Gym from "./pages/Gym";
 import SmartEmergencyRoom from "./pages/SmartEmergencyRoom";
 import HealthAdministration from "./pages/HealthAdministration";
 
+
+
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Faq from "./pages/Faq";
+
+
+
 // ===== صفحات النصائح الطبية =====
 import HeartTips from "./pages/HeartTips";
 import BodyTips from "./pages/BodyTips";
@@ -51,6 +59,12 @@ export default function App() {
         <Route path="/gym" element={<Gym />} />
         <Route path="/emergency" element={<SmartEmergencyRoom />} />
         <Route path="/health-administration" element={<HealthAdministration />} />
+
+
+         {/* ===== صفحات المعلومات القانونية ===== */}
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/faq" element={<Faq />} />
 
         {/* ===== صفحات النصائح الطبية ===== */}
         <Route path="/tips/heart" element={<HeartTips />} />

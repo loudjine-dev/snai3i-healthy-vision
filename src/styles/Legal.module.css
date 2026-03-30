@@ -1,0 +1,82 @@
+/* Legal.module.css - ستايل أنيق ومريح لمنصتك */
+
+.faqContainer, .privacyContainer, .termsContainer {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  font-family: 'Cairo', sans-serif;
+  color: #1f1f1f;
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+.faqTitle, .privacyTitle, .termsTitle {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+.faqQuestion, .privacySectionTitle, .termsSectionTitle {
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #0a58ca;
+}
+
+.faqAnswer, .privacyContainer p, .termsContainer p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.faqContainer div, .privacyContainer ul, .termsContainer ul {
+  margin-bottom: 12px;
+}
+
+.privacyList, .termsList {
+  padding-left: 22px;
+  list-style-type: disc;
+}
+
+a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+.privacyDate, .termsDate {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .faqContainer, .privacyContainer, .termsContainer {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .faqTitle, .privacyTitle, .termsTitle {
+    font-size: 24px;
+  }
+
+  .faqQuestion, .privacySectionTitle, .termsSectionTitle {
+    font-size: 16px;
+  }
+
+  .faqAnswer, .privacyContainer p, .termsContainer p {
+    font-size: 15px;
+  }
+}
