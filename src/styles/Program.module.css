@@ -1,0 +1,208 @@
+/* ===================== VARIABLES ===================== */
+:root {
+  --primary: #4fd1c5;
+  --accent: #38b2ac;
+  --bg: #f7fcfd;
+  --card-bg: #ffffff;
+  --text-main: #1f2933;
+  --text-muted: #6b7280;
+  --tip-bg: #e6f7f9;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 35px rgba(0, 0, 0, 0.12);
+  --radius: 20px;
+}
+
+/* ===================== CONTAINER ===================== */
+.container {
+  min-height: 100vh;
+  padding: 40px 20px 60px;
+  background-color: var(--bg);
+  font-family: "Cairo", sans-serif;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+/* ===================== SELECT WRAPPER ===================== */
+.selectWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.levelSelect {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Cairo", sans-serif;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.levelSelect:hover {
+  background-color: var(--accent);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.levelSelect:focus {
+  background-color: var(--primary);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.2);
+}
+
+.levelSelect option {
+  padding: 8px 12px;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* ===================== GRID ===================== */
+.grid {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ===================== CARD ===================== */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  border-top: 4px solid var(--accent);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ===================== LIST ===================== */
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.card ul li {
+  font-size: 1rem;
+  color: var(--text-main);
+  padding: 8px 0 8px 20px;
+  position: relative;
+  margin: 0;
+}
+
+.card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ===================== TIP ===================== */
+.tip {
+  display: inline-block;
+  background-color: var(--tip-bg);
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  margin-top: 12px;
+  border-left: 3px solid var(--primary);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 25px 15px 40px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .selectWrapper {
+    margin-bottom: 15px;
+  }
+
+  .levelSelect {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    gap: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card ul li {
+    font-size: 0.9rem;
+    padding: 6px 0 6px 18px;
+  }
+
+  .tip {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}

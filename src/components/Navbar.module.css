@@ -1,0 +1,63 @@
+:root {
+  --primary: #129fb8;
+  --accent: #38b2ac;
+  --text: #1f2933;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(18, 159, 184, 0.15);
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.navLinks li a:hover {
+  background: rgba(18, 159, 184, 0.12);
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navLinks {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}

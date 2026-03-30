@@ -1,0 +1,180 @@
+/* ===================== VARIABLES ===================== */
+:root {
+  --primary: #4fd1c5;
+  --accent: #38b2ac;
+  --bg: #f7fcfd;
+  --text: #1f2933;
+  --logo: #0f172a;
+  --card-bg: #ffffff;
+  --text-muted: #6b7280;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.12);
+  --radius: 20px;
+}
+
+/* ===================== PAGE ===================== */
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cairo", sans-serif;
+  padding: 40px 20px;
+}
+
+/* ===================== MAIN CARD ===================== */
+.card {
+  width: 100%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 24px;
+  padding: 50px 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ===================== TITLE ===================== */
+.title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: var(--logo);
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 5px;
+}
+
+/* ===================== DESCRIPTION ===================== */
+.desc {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 25px auto 45px;
+}
+
+/* ===================== GRID ===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* ===================== ITEM (LINK CARD) ===================== */
+.item {
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  background: linear-gradient(
+    135deg,
+    rgba(79, 209, 197, 0.15),
+    rgba(56, 178, 172, 0.25)
+  );
+  padding: 28px 20px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+/* تأثير موجة خفيفة */
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.45),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+/* Hover */
+.item:hover {
+  transform: translateY(-8px) scale(1.04);
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===================== ANIMATION ===================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .card {
+    padding: 35px 25px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .desc {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item {
+    font-size: 1.05rem;
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 25px 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .title::after {
+    width: 60px;
+  }
+
+  .desc {
+    font-size: 0.95rem;
+  }
+
+  .item {
+    font-size: 0.95rem;
+    padding: 18px 14px;
+    min-height: 80px;
+  }
+}

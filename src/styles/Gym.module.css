@@ -1,0 +1,165 @@
+:root {
+  /* ألوان الموقع */
+  --primary: #129fb8;
+  --accent: #38b2ac;
+  --bg: #def3fa;
+  --card-bg: #ffffff;
+  --text-main: #1f2933;
+  --text-muted: #475569;
+}
+
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ===== PAGE ===== */
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+  padding: 120px 20px 60px;
+  text-align: center;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 80px;
+  position: relative;
+}
+
+
+.title::after {
+  content: "";
+  width: 90px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 10px;
+}
+
+
+/* ===== CARDS ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+
+/* ===== CARD ===== */
+.card {
+  width: 320px;
+  background: var(--card-bg);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(18, 159, 184, 0.25);
+  transition: 0.45s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-14px) scale(1.02);
+  box-shadow: 0 30px 70px rgba(18, 159, 184, 0.4);
+}
+
+
+/* ===== TOP ===== */
+.cardTop {
+  height: 190px;
+  background: linear-gradient(135deg, #b1f6ff, #6ed8e6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 70% 35%;
+}
+
+
+.card:nth-child(2) .cardTop {
+  background: linear-gradient(135deg, #6ed8e6, #38b2ac);
+}
+
+
+.cardTop img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.25));
+}
+
+
+/* ===== BODY ===== */
+.cardBody {
+  padding: 30px 24px 36px;
+  color: var(--text-main);
+}
+
+
+.cardBody h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+
+.cardBody p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+
+/* ===== BUTTON ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 34px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.35s ease;
+}
+
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(56, 178, 172, 0.7);
+}
+
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+
+
+  .cards {
+    gap: 35px;
+  }
+
+
+  .card {
+    width: 92%;
+    max-width: 360px;
+  }
+}

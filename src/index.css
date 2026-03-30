@@ -1,0 +1,53 @@
+/* ===================== ROOT COLORS ===================== */
+:root {
+  --primary: #129fb8;
+  --accent: #38b2ac;
+  --bg: #def3fa;
+  --card-bg: #ffffff;
+  --text-main: #1f2933;
+  --text-muted: #5b6b73;
+  --shadow-soft: 0 10px 25px rgba(18,159,184,0.15);
+  --radius-lg: 20px;
+}
+
+/* ===================== General ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  color: var(--text-main);
+  background: var(--bg);
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
