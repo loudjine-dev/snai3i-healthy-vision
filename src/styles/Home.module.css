@@ -1,5 +1,5 @@
 :root {
-  /* ألوان متناسقة (تركوازي / أزرق مريح) */
+  /* ألوان عامة */
   --primary: #4fd1c5;
   --accent: #38b2ac;
   --bg: #f7fcfd;
@@ -211,6 +211,14 @@
 
 .icon { font-size: 24px; color: var(--primary); margin-bottom: 8px; }
 .more { font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+
+/* ===== أسماء الفئات باللون الأسود ===== */
+.cardContent h3 {
+  color: #000; /* أسود */
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
 
 /* ===== SECTION TITLE ===== */
 .sectionTitle {
